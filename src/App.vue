@@ -1,7 +1,7 @@
 <script setup>
-import MethodComponent from "./components/MethodComponent.vue";
+import ModelComponent from "./components/ModelComponent.vue";
 </script>
 
 <template>
-  <MethodComponent />
+  <ModelComponent />
 </template>

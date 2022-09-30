@@ -12,7 +12,7 @@ const person = reactive({
 const changeName = () => {
   person.fName = "Evita";
   person.lName = "Karlina";
-}
+};
 const { fName, lName } = toRefs(person);
 </script>
 
