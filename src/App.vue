@@ -1,7 +1,7 @@
 <script setup>
-import ComputedComponent from "./components/ComputedComponent.vue";
+import WatcherComponent from "./components/WatcherComponent.vue";
 </script>
 
 <template>
-  <ComputedComponent />
+  <WatcherComponent />
 </template>
