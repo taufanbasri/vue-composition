@@ -1,7 +1,7 @@
 <script setup>
-import ModelComponent from "./components/ModelComponent.vue";
+import ComputedComponent from "./components/ComputedComponent.vue";
 </script>
 
 <template>
-  <ModelComponent />
+  <ComputedComponent />
 </template>
