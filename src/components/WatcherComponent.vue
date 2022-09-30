@@ -1,5 +1,30 @@
 <script setup>
-import { ref, watch } from "vue";
+import { reactive, ref, toRefs, watch } from "vue";
+
+const state = reactive({
+  firstName: "",
+  lastName: "",
+});
+
+const { firstName, lastName } = toRefs(state);
+
+// to watch all in state
+// watch(state, (newValue, oldValue) => {
+//   console.log("firstName Old value", oldValue.firstName);
+//   console.log("firstName New value", newValue.firstName);
+
+//   console.log("lastName Old value", oldValue.lastName);
+//   console.log("lastName New value", newValue.lastName);
+// });
+
+// to watch single element in reactive object
+watch(
+  () => state.firstName,
+  (newValue, oldValue) => {
+    console.log("firstName Old value", oldValue);
+    console.log("firstName New value", newValue);
+  }
+);
 
 const fName = ref("");
 const lName = ref("");
@@ -15,7 +40,18 @@ watch([fName, lName], (newValues, oldValues) => {
 
 <template>
   <div>
-    <input type="text" placeholder="First Name" v-model="fName" />
-    <input type="text" placeholder="Last Name" v-model="lName" />
+    <div>
+      <input
+        type="text"
+        placeholder="Reactive First Name"
+        v-model="firstName"
+      />
+      <input type="text" placeholder="Reactive Last Name" v-model="lastName" />
+    </div>
+
+    <div>
+      <input type="text" placeholder="First Name" v-model="fName" />
+      <input type="text" placeholder="Last Name" v-model="lName" />
+    </div>
   </div>
 </template>
