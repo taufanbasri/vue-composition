@@ -1,10 +1,12 @@
 <script setup>
-import { ref, reactive } from "vue";
+import { ref, reactive, toRefs } from "vue";
 
 const state = reactive({
-  firstName: "Azizah",
-  lastName: "Arraya",
+  fName: "Azizah",
+  lName: "Arraya",
 });
+
+const { fName, lName } = toRefs(state);
 
 const reactiveGreeting = `Hello my name is ${state.firstName} ${state.lastName}`;
 
@@ -17,4 +19,5 @@ console.log(firstName);
   <div>Ref - {{ firstName }}</div>
   <div>Reactive - {{ reactiveGreeting }}</div>
   <div>Access state reactive - {{ state.firstName }} {{ state.lastName }}</div>
+  <div>toRefs - {{ fName }} {{ lName }}</div>
 </template>
