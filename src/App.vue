@@ -1,7 +1,7 @@
 <script setup>
-import DataComponent from "./components/DataComponent.vue";
+import MethodComponent from "./components/MethodComponent.vue";
 </script>
 
 <template>
-  <DataComponent />
+  <MethodComponent />
 </template>
