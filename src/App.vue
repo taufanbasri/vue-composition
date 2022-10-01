@@ -1,26 +1,23 @@
 <script setup>
-import CardComponent from "./components/CardComponent.vue";
+import NameList from "./components/NameList.vue";
 </script>
 
 <template>
-  <card-component />
-  <CardComponent>Card Content 1</CardComponent>
-  <CardComponent>
-    <h2>Card Content 2</h2>
-  </CardComponent>
-  <CardComponent>
-    <img src="https://picsum.photos/200" alt="image" />
-  </CardComponent>
+  <name-list>
+    <template v-slot:default="slotProps">
+      {{ slotProps.firstName }} {{ slotProps.lastName }}
+    </template>
+  </name-list>
 
-  <card-component>
-    <template v-slot:header>
-      <h3>Header</h3>
+  <name-list>
+    <template v-slot:default="slotProps">
+      {{ slotProps.lastName }}, {{ slotProps.firstName }}
     </template>
-    <template v-slot:default>
-      <img src="https://picsum.photos/200" alt="image" />
+  </name-list>
+
+  <name-list>
+    <template v-slot:default="slotProps">
+      {{ slotProps.firstName }}
     </template>
-    <template v-slot:footer>
-      <button>View Details</button>
-    </template>
-  </card-component>
+  </name-list>
 </template>
