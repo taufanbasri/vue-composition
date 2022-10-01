@@ -1,7 +1,7 @@
 <script setup>
-import ProvideInject from "./components/ProvideInject/ProvideInject.vue";
+import LifeCycle from "./components/LifeCycle.vue";
 </script>
 
 <template>
-  <ProvideInject />
+  <LifeCycle />
 </template>
