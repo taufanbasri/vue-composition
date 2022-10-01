@@ -1,10 +1,10 @@
 import { ref } from "vue";
 
-export default function useCounter() {
-  const count = ref(0);
+export default function useCounter(initialCount = 0, stepSize = 1) {
+  const count = ref(initialCount);
 
   const incrementCount = () => {
-    count.value++;
+    count.value += stepSize;
   };
 
   return { count, incrementCount };

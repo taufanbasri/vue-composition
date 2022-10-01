@@ -1,7 +1,7 @@
 <script setup>
 import useCounter from "../../composables/useCounter";
 
-const { count, incrementCount } = useCounter();
+const { count, incrementCount } = useCounter(100, 10);
 </script>
 
 <template>
