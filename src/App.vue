@@ -1,7 +1,9 @@
 <script setup>
-import PersonComponent from "./components/props/PersonComponent.vue";
+import ClickCounter from "./components/reusability/ClickCounter.vue";
+import HoverCounter from "./components/reusability/HoverCounter.vue";
 </script>
 
 <template>
-  <PersonComponent />
+  <ClickCounter />
+  <HoverCounter />
 </template>
