@@ -11,4 +11,16 @@ import CardComponent from "./components/CardComponent.vue";
   <CardComponent>
     <img src="https://picsum.photos/200" alt="image" />
   </CardComponent>
+
+  <card-component>
+    <template v-slot:header>
+      <h3>Header</h3>
+    </template>
+    <template v-slot:default>
+      <img src="https://picsum.photos/200" alt="image" />
+    </template>
+    <template v-slot:footer>
+      <button>View Details</button>
+    </template>
+  </card-component>
 </template>
