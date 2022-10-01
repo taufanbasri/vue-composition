@@ -1,7 +1,7 @@
 <script setup>
-import LifeCycle from "./components/LifeCycle.vue";
+import TemplateRef from "./components/TemplateRef.vue";
 </script>
 
 <template>
-  <LifeCycle />
+  <TemplateRef />
 </template>
