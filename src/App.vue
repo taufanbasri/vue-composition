@@ -1,7 +1,7 @@
 <script setup>
-import WatcherComponent from "./components/WatcherComponent.vue";
+import ProvideInject from "./components/ProvideInject/ProvideInject.vue";
 </script>
 
 <template>
-  <WatcherComponent />
+  <ProvideInject />
 </template>
