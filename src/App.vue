@@ -1,7 +1,7 @@
 <script setup>
-import TemplateRef from "./components/TemplateRef.vue";
+import PersonComponent from "./components/props/PersonComponent.vue";
 </script>
 
 <template>
-  <TemplateRef />
+  <PersonComponent />
 </template>
