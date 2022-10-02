@@ -1,23 +1,17 @@
 <script setup>
-import NameList from "./components/NameList.vue";
+import { ref } from "vue";
+
+import TabA from "./components/dynamics/TabA.vue";
+import TabB from "./components/dynamics/TabB.vue";
+import TabC from "./components/dynamics/TabC.vue";
+
+const activeTab = ref(TabA);
 </script>
 
 <template>
-  <name-list>
-    <template v-slot:default="slotProps">
-      {{ slotProps.firstName }} {{ slotProps.lastName }}
-    </template>
-  </name-list>
+  <button @click="activeTab = TabA">Tab A</button>
+  <button @click="activeTab = TabB">Tab B</button>
+  <button @click="activeTab = TabC">Tab C</button>
 
-  <name-list>
-    <template v-slot:default="slotProps">
-      {{ slotProps.lastName }}, {{ slotProps.firstName }}
-    </template>
-  </name-list>
-
-  <name-list>
-    <template v-slot:default="slotProps">
-      {{ slotProps.firstName }}
-    </template>
-  </name-list>
+  <component :is="activeTab"></component>
 </template>
