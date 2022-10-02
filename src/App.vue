@@ -1,9 +1,7 @@
 <script setup>
-import PortalComponent from "./components/PortalComponent.vue";
+import PostList from "./components/http/PostList.vue";
 </script>
 
 <template>
-  <teleport to="#portal-root">
-    <portal-component />
-  </teleport>
+  <post-list />
 </template>
