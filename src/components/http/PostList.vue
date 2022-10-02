@@ -1,9 +1,13 @@
 <script setup>
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 import axios from "axios";
 
 const posts = ref([]);
 const errorMsg = ref("");
+
+onMounted(() => {
+  getPosts();
+});
 
 const getPosts = () => {
   axios
@@ -21,7 +25,6 @@ const getPosts = () => {
 </script>
 
 <template>
-  <button @click="getPosts">Load Post</button>
   <h3 v-if="errorMsg">{{ errorMsg }}</h3>
 
   <div v-for="post in posts" :key="post.id">
